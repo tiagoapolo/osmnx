@@ -32,3 +32,35 @@ On Windows:
 On Mac/Linux:
 
   `docker run --rm -it -u 0 --name osmnx -v "$PWD":/home/jovyan/work gboeing/osmnx /bin/bash`
+
+
+## Overview
+
+**OSMnx** is a Python package that lets you download spatial geometries and
+model, project, visualize, and analyze street networks from OpenStreetMap's
+APIs. Users can download and model walkable, drivable, or bikable urban
+networks with a single line of Python code, and then easily analyze and
+visualize them:
+
+```python
+import osmnx as ox
+G = ox.graph_from_place('Manhattan Island, New York City, New York, USA', network_type='drive')
+ox.plot_graph(G)
+```
+![](../docs/figures/manhattan.png)
+
+In a couple lines of code you can examine intersection density, network
+circuity, average block size, PageRank, betweenness centrality, connectivity,
+spatial distribution of dead-ends or 4-way intersections, etc for anywhere in
+the world:
+
+```python
+basic_stats = ox.basic_stats(G)
+print(basic_stats['circuity_avg'])
+
+extended_stats = ox.extended_stats(G)
+print(extended_stats['pagerank_max_node'])
+```
+
+You can just as easily download and work with building footprints, elevation
+data, street bearings/orientations, and network routing.
