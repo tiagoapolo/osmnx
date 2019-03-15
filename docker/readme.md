@@ -6,6 +6,11 @@ The OSMnx docker container image and usage instructions are available on [docker
 
 Usage
 
+#### Pull the container image
+
+`docker pull gboeing/osmnx`
+
+
 #### Run the docker container
 
 
