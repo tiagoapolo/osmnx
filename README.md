@@ -1,4 +1,29 @@
-# OSMnx Docker Image
+# Pathfinding Project
+
+## About
+
+
+The project consists in a implementation of the four well known pathfinding algorithms to create a navigation path between 2 points around Manhattan.
+
+Algorithms used:
+
+- Breadth First 
+- Best-First-Search
+- A*
+- Dijkstra
+
+## Start
+
+- The project uses Python, Jupyter and Docker.
+
+- Use the `map_osmnx.ipynb` notebook to run the project.
+
+
+------
+
+
+## Installation
+
 
 First, install [docker](https://www.docker.com/). 
 
@@ -69,6 +94,7 @@ print(extended_stats['pagerank_max_node'])
 
 You can just as easily download and work with building footprints, elevation
 data, street bearings/orientations, and network routing.
+
 
 
 ## Documentation
